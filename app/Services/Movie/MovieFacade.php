@@ -36,9 +36,9 @@ class MovieFacade implements MovieFacadeInterface
     public function getTitles(): array
     {
         $cacheKey = 'movie_titles_cache_key';
-//        if (cache()->has($cacheKey)) {
-//            return cache()->get($cacheKey);
-//        }
+        if (cache()->has($cacheKey)) {
+            return cache()->get($cacheKey);
+        }
 
         $movieServices = [
             $this->fooMovieService,

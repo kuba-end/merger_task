@@ -1,3 +1,15 @@
+# Creating test user
+```php
+php artisan tinker
+$user = new App\Models\User();
+$user->password = Hash::make('foo-bar-baz');
+$user->email = 'the1-email@examplee.com'
+$user->name = 'BAZ_anything' // for correct name
+$user->name = 'not_so_correct' // for incorrect name
+$user->save();
+```
+
+
 Merger
 =====
 
